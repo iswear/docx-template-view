@@ -3,7 +3,7 @@ import { ExecutionContext } from "./context"
 let environmentId = 0
 let contextId = 0
 
-type ComponentFactory = (type: string, value: any, config: any) => any
+type ComponentFactory = (type: string, value: any, config: any, update: (value: any) => void, onUpdate: (value: any) => void) => any
 
 export class Environment {
   private globalModel: {[key: string]: any}
